@@ -1,0 +1,490 @@
+/* ===== RESET & BASE STYLES ===== */
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Martel Sans', Helvetica, Arial, sans-serif;
+    background-color: #000;
+    color: #fff;
+    line-height: 1.5;
+}
+
+a {
+    color: #fff;
+    text-decoration: none;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* Screen-reader-only label class */
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    border: 0;
+}
+
+/* ===== SECTION DIVIDER ===== */
+.divider {
+    height: 8px;
+    background-color: #232323;
+}
+
+/* ===== BUTTONS ===== */
+.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.btn-primary {
+    background-color: #e50914;
+    color: #fff;
+    font-size: 1.1rem;
+    padding: 14px 28px;
+}
+
+.btn-primary:hover {
+    background-color: #f40612;
+}
+
+.btn-signin {
+    background-color: #e50914;
+    color: #fff;
+    padding: 8px 18px;
+    font-size: 0.9rem;
+    border-radius: 4px;
+}
+
+.btn-signin:hover {
+    background-color: #f40612;
+}
+
+/* ===== NAVBAR ===== */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 5%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 10;
+}
+
+.logo {
+    width: 150px;
+}
+
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+}
+
+.nav-links a {
+    font-size: 1rem;
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: #e50914;
+}
+
+/* ===== HERO SECTION ===== */
+.hero {
+    position: relative;
+    width: 100%;
+    min-height: 700px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 0 5%;
+    background: linear-gradient(
+        to top,
+        rgba(0, 0, 0, 1) 0%,
+        rgba(0, 0, 0, 0.7) 40%,
+        rgba(0, 0, 0, 0.7) 100%
+    ),
+    url('https://assets.nflxext.com/ffe/siteui/vlv3/bfc0fc46-24f6-4d70-85b3-7799b2b12571/web/ZA-en-20250120-TRIFECTA-perspective_4aef76eb-7e8b-42be-9d60-2c1e9490b5a3_large.jpg') center center / cover no-repeat;
+}
+
+.hero-content {
+    max-width: 750px;
+    padding-top: 80px;
+}
+
+.hero-content h1 {
+    font-size: 3.2rem;
+    font-weight: 900;
+    line-height: 1.1;
+    margin-bottom: 16px;
+}
+
+.hero-subtitle {
+    font-size: 1.5rem;
+    font-weight: 400;
+    margin-bottom: 20px;
+}
+
+.hero-cta-text {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+}
+
+/* ===== GET STARTED FORM ===== */
+.get-started-form {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.get-started-form input[type="email"] {
+    flex: 1;
+    min-width: 260px;
+    max-width: 420px;
+    padding: 14px 16px;
+    font-size: 1rem;
+    border: 1px solid #808080;
+    border-radius: 4px;
+    background-color: rgba(22, 22, 22, 0.7);
+    color: #fff;
+    outline: none;
+    transition: border-color 0.3s ease;
+}
+
+.get-started-form input[type="email"]:focus {
+    border-color: #fff;
+}
+
+.get-started-form input[type="email"]::placeholder {
+    color: #8c8c8c;
+}
+
+/* ===== FEATURES SECTION ===== */
+.features {
+    padding: 0;
+}
+
+.feature-row {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 50px 5%;
+    max-width: 1200px;
+    margin: 0 auto;
+    gap: 40px;
+}
+
+.feature-row.reverse {
+    flex-direction: row-reverse;
+}
+
+.feature-text {
+    flex: 1;
+}
+
+.feature-text h2 {
+    font-size: 2.5rem;
+    font-weight: 900;
+    margin-bottom: 16px;
+}
+
+.feature-text p {
+    font-size: 1.3rem;
+    font-weight: 400;
+    color: #d4d4d4;
+}
+
+.feature-media {
+    flex: 1;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.feature-media img {
+    position: relative;
+    z-index: 2;
+}
+
+/* Video overlaid inside the TV / device images */
+.feature-video {
+    position: absolute;
+    z-index: 1;
+}
+
+.tv-video {
+    width: 73%;
+    top: 46%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    max-height: 54%;
+}
+
+.devices-video {
+    width: 60%;
+    top: 34%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    max-height: 47%;
+}
+
+/* ===== FAQ SECTION ===== */
+.faq {
+    padding: 60px 5%;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.faq h2 {
+    font-size: 2.5rem;
+    font-weight: 900;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+/* Individual FAQ item */
+.faq details {
+    background-color: #2d2d2d;
+    margin-bottom: 8px;
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+.faq details summary {
+    padding: 20px 24px;
+    font-size: 1.3rem;
+    font-weight: 600;
+    cursor: pointer;
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: background-color 0.2s ease;
+}
+
+.faq details summary:hover {
+    background-color: #414141;
+}
+
+/* Custom plus / close icon */
+.faq details summary::after {
+    content: '+';
+    font-size: 2rem;
+    font-weight: 300;
+    color: #fff;
+    transition: transform 0.25s ease;
+    flex-shrink: 0;
+    margin-left: 16px;
+}
+
+.faq details[open] summary::after {
+    transform: rotate(45deg);
+}
+
+/* Remove default marker in all browsers */
+.faq details summary::-webkit-details-marker {
+    display: none;
+}
+
+.faq details p {
+    padding: 20px 24px;
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: #d4d4d4;
+    border-top: 1px solid #000;
+}
+
+/* CTA inside FAQ */
+.faq-cta {
+    text-align: center;
+    margin-top: 40px;
+}
+
+.faq-cta p {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+}
+
+/* ===== FOOTER ===== */
+.site-footer {
+    padding: 50px 5%;
+    max-width: 1000px;
+    margin: 0 auto;
+    color: #808080;
+}
+
+.footer-contact {
+    margin-bottom: 30px;
+    font-size: 1rem;
+}
+
+.footer-contact a {
+    color: #808080;
+    text-decoration: underline;
+}
+
+.footer-contact a:hover {
+    color: #fff;
+}
+
+.footer-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 14px;
+    margin-bottom: 30px;
+}
+
+.footer-grid a {
+    color: #808080;
+    font-size: 0.85rem;
+    text-decoration: underline;
+    transition: color 0.3s ease;
+}
+
+.footer-grid a:hover {
+    color: #fff;
+}
+
+.footer-copy {
+    font-size: 0.85rem;
+    color: #555;
+}
+
+/* ===== RESPONSIVE DESIGN (MEDIA QUERIES) ===== */
+
+/* Tablets and smaller desktops */
+@media (max-width: 950px) {
+    .hero-content h1 {
+        font-size: 2.4rem;
+    }
+
+    .feature-row,
+    .feature-row.reverse {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .feature-text h2 {
+        font-size: 2rem;
+    }
+
+    .feature-text p {
+        font-size: 1.1rem;
+    }
+
+    .faq h2 {
+        font-size: 2rem;
+    }
+
+    .footer-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+/* Mobile devices */
+@media (max-width: 600px) {
+    .navbar {
+        padding: 16px 4%;
+    }
+
+    .logo {
+        width: 100px;
+    }
+
+    .nav-links {
+        gap: 12px;
+    }
+
+    .nav-links a:not(.btn-signin) {
+        display: none;
+    }
+
+    .hero {
+        min-height: 500px;
+    }
+
+    .hero-content {
+        padding-top: 60px;
+    }
+
+    .hero-content h1 {
+        font-size: 1.75rem;
+    }
+
+    .hero-subtitle {
+        font-size: 1.1rem;
+    }
+
+    .hero-cta-text {
+        font-size: 1rem;
+    }
+
+    .get-started-form {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .get-started-form input[type="email"] {
+        min-width: 100%;
+    }
+
+    .btn-primary {
+        width: 100%;
+        text-align: center;
+    }
+
+    .feature-text h2 {
+        font-size: 1.5rem;
+    }
+
+    .feature-text p {
+        font-size: 1rem;
+    }
+
+    .faq h2 {
+        font-size: 1.5rem;
+    }
+
+    .faq details summary {
+        font-size: 1.05rem;
+        padding: 16px 18px;
+    }
+
+    .faq details p {
+        font-size: 1rem;
+        padding: 16px 18px;
+    }
+
+    .footer-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
