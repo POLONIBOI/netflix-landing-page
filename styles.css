@@ -131,7 +131,7 @@ img {
         rgba(0, 0, 0, 0.7) 40%,
         rgba(0, 0, 0, 0.7) 100%
     ),
-    url('https://assets.nflxext.com/ffe/siteui/vlv3/bfc0fc46-24f6-4d70-85b3-7799b2b12571/web/ZA-en-20250120-TRIFECTA-perspective_4aef76eb-7e8b-42be-9d60-2c1e9490b5a3_large.jpg') center center / cover no-repeat;
+    url('bg.jpg') center center / cover no-repeat;
 }
 
 .hero-content {
